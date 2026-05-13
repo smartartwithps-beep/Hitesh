@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User's smoke-free journey data",
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "description": "User's public display name"
+        },
+        "quitDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The date and time the user quit smoking"
+        },
+        "cigarettesPerDay": {
+          "type": "integer",
+          "description": "Number of cigarettes the user smoked per day"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last update"
+        }
+      },
+      "required": ["displayName", "quitDate", "cigarettesPerDay", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Individual user progress and profile"
+    }
+  }
+}

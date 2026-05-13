@@ -1,0 +1,6 @@
+{
+  "name": "SmokeFree Counter",
+  "description": "A real-time tracker to help you stay smoke-free by counting the time elapsed since your quit date.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
